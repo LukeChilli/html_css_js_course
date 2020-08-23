@@ -25,19 +25,30 @@ body h1 {
 }
 
 #nav-list a {
+    color:black;
     text-align: center;
-    color: darkred;
 }
 
 #nav-list a:hover {
-    color: white;
+    font-weight: bold;
+}
+
+#nav-list li:not(:last-child):after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: 0 auto;
     background: darkred;
 }
 
-#nav-list > :not(:last-child) {
-    border-bottom: 1px solid #9b0000;
- }
+.navbar-toggle .icon-bar {
+    background-color: darkred !important;
+}
 
+.navbar-collapse {
+    border-color: darkred !important;
+}
 
 /* MENU ITEM */
 
@@ -57,11 +68,3 @@ body h1 {
 .menu-item:hover {
     box-shadow: 0 1px 5px 1px #333333;
 }
-
-/********** Medium devices only **********/
-
-@media (min-width: 992px) {}
-
-/********** Small devices only **********/
-
-@media (min-width: 768px) and (max-width: 991px) {}
